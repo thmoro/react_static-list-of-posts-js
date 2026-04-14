@@ -1,7 +1,12 @@
 import { PostInfo } from '../PostInfo';
+import './PostList.scss';
 
 export const PostList = ({ posts }) => {
-  return posts.map(post => (
-    <PostInfo post={post} key={post.id} />
-  ));
+  return (
+    <div className="PostList">
+      {posts.map(post => (
+        <PostInfo post={post} key={post.id} />
+      ))}
+    </div>
+  );
 };
